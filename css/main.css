@@ -1,0 +1,609 @@
+html {overflow-x: hidden;scroll-behavior: smooth;}
+body {font-family: 'Metropolis';}
+h1{font-size: 50px;font-family: 'Metropolis';font-weight: 700;}
+h2 {font-size: 48px;font-family: 'Metropolis';font-weight: 600;color: #391C19;} 
+h3 {font-size: 25px;font-weight: 500;font-family: 'Metropolis';}
+h4{font-size: 17px;font-family: 'Metropolis';font-weight: 700;}
+p {font-size: 15px;font-family: 'Metropolis';font-weight: 400;}
+ul {padding-left: 0;list-style: none;}
+li {font-size: 15px;font-family: 'Metropolis';font-weight: 400;}
+label {font-size: 16px;font-weight: 500;font-family: 'Metropolis';}
+input {outline: none;font-weight: 400;font-size: 15px;font-family: 'Metropolis';color: #000;}
+select {outline: none;font-weight: 400;font-size: 15px;font-family: 'Metropolis';color: #000;}
+a {text-decoration: none;font-family: 'Metropolis';font-size: 15px;transition: 0.6s all ease-in-out;}
+a:hover, a:focus{text-decoration: none;}
+.compensate-for-scrollbar {position: inherit !important;margin: 0 !important;padding: 0 !important;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Light.woff2') format('woff2'),url('../fonts/Metropolis-Light.woff') format('woff'),url('../fonts/Metropolis-Light.ttf') format('truetype');font-weight: 300;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraLight.woff2') format('woff2'),url('../fonts/Metropolis-ExtraLight.woff') format('woff'),url('../fonts/Metropolis-ExtraLight.ttf') format('truetype');font-weight: 200;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraLightItalic.woff2') format('woff2'),url('../fonts/Metropolis-ExtraLightItalic.woff') format('woff'),url('../fonts/Metropolis-ExtraLightItalic.ttf') format('truetype');font-weight: 200;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Thin.woff2') format('woff2'),url('../fonts/Metropolis-Thin.woff') format('woff'),url('../fonts/Metropolis-Thin.ttf') format('truetype');font-weight: 100;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraBold.woff2') format('woff2'),url('../fonts/Metropolis-ExtraBold.woff') format('woff'),url('../fonts/Metropolis-ExtraBold.ttf') format('truetype');font-weight: bold;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Medium.woff2') format('woff2'),url('../fonts/Metropolis-Medium.woff') format('woff'),url('../fonts/Metropolis-Medium.ttf') format('truetype');font-weight: 500;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Semi';src: url('../fonts/Metropolis-SemiBoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-SemiBoldItalic.woff') format('woff'),url('../fonts/Metropolis-SemiBoldItalic.ttf') format('truetype');font-weight: 600;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Regular.woff2') format('woff2'),url('../fonts/Metropolis-Regular.woff') format('woff'),url('../fonts/Metropolis-Regular.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-RegularItalic.woff2') format('woff2'),url('../fonts/Metropolis-RegularItalic.woff') format('woff'),url('../fonts/Metropolis-RegularItalic.ttf') format('truetype');font-weight: normal;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-BlackItalic.woff2') format('woff2'),url('../fonts/Metropolis-BlackItalic.woff') format('woff'),url('../fonts/Metropolis-BlackItalic.ttf') format('truetype');font-weight: 900;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Black.woff2') format('woff2'),url('../fonts/Metropolis-Black.woff') format('woff'),url('../fonts/Metropolis-Black.ttf') format('truetype');font-weight: 900;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Bold.woff2') format('woff2'),url('../fonts/Metropolis-Bold.woff') format('woff'),url('../fonts/Metropolis-Bold.ttf') format('truetype');font-weight: bold;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-MediumItalic.woff2') format('woff2'),url('../fonts/Metropolis-MediumItalic.woff') format('woff'),url('../fonts/Metropolis-MediumItalic.ttf') format('truetype');font-weight: 500;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-BoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-BoldItalic.woff') format('woff'),url('../fonts/Metropolis-BoldItalic.ttf') format('truetype');font-weight: bold;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraBoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-ExtraBoldItalic.woff') format('woff'),url('../fonts/Metropolis-ExtraBoldItalic.ttf') format('truetype');font-weight: bold;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-LightItalic.woff2') format('woff2'),url('../fonts/Metropolis-LightItalic.woff') format('woff'),url('../fonts/Metropolis-LightItalic.ttf') format('truetype');font-weight: 300;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis Semi';src: url('../fonts/Metropolis-SemiBold.woff2') format('woff2'),url('../fonts/Metropolis-SemiBold.woff') format('woff'),url('../fonts/Metropolis-SemiBold.ttf') format('truetype');font-weight: 600;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-ThinItalic.woff2') format('woff2'),url('../fonts/Metropolis-ThinItalic.woff') format('woff'),url('../fonts/Metropolis-ThinItalic.ttf') format('truetype');font-weight: 100;font-style: italic;font-display: swap;}
+
+/*HOME PAGE CSS BEGIN*/
+/*HEADER & BANNER SECTION CSS BEGIN*/
+.mobile-scr {display: none;}
+.mobile_show {display: none;}
+.mobile_show2 {display: none;}
+.header_banner_sec {position: relative;background-image: url("../images/train_background.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding: 0 0 0;}
+.overlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #00000073;}
+.top_bar {border-bottom: 3px solid #FFF;padding-bottom: 6px;margin-bottom: 10px;}
+.logo_img {width: 80%;margin-top: 10px;}
+.social_icons {text-align: center;padding: 30px 0 0;}
+.social_icons li {display: inline-block;padding: 0 22px 0 0;}
+.social_icons a {color: #fff;font-size: 18px;}
+.social_icons a:hover {color: #5874E2;}
+.login_links {text-align: right;padding: 30px 0 0;}
+.login_links li {display: inline-block;padding: 0 17px 0 0;}
+.login_links a {color: #fff;font-weight: 600;}
+.login_links a:hover {color:#5874E2;}
+.login_links span {color: #fff;}
+.header_banner_sec .navbar-light .navbar-nav .nav-link {color: #fff;font-size: 17px;font-weight: 600;transition: 0.6s all ease-in-out;}
+.header_banner_sec .navbar-light .navbar-nav .nav-link:hover {color:#5874E2;}
+.header_banner_sec .navbar-light .navbar-nav .nav-link.active {color:#5874E2;}
+.main_heading {color: #fff;}
+.main_txt {color: #fff;padding-top: 8px;}
+.header_banner_sec .nav-item {padding: 0 37px 0 0;}
+.header_banner_sec .navbar-nav {text-align: center;}
+.main_banner_heading {padding: 120px 0 20px;}
+.main_form_inner {position: relative;}
+.main_form_inner label {display: block;color: #fff;}
+.main_form_inner input {width: 100%;padding: 10px 10px;border: 0;margin-bottom: 23px;}
+.marker {position: absolute;top: 38px;right: 13px;}
+.main_form_inner2 {position: relative;padding-top: 24px;}
+.main_form_inner2 label {display: block;}
+.main_form_inner2 input {width: 100%;padding: 10px 10px;}
+.marker2 {position: absolute;top: 37px;right: 15px;}
+.main_form_inner select {width: 100%;padding: 14px 10px;border: 0;margin-bottom: 23px;}
+.main_form_inner2 select {width: 100%;padding: 14px 10px;border:0;}
+.contact_det a {color: #fff;font-weight: 600;}
+.contact_det {margin: 0 0 0 32px;}
+.header-banner-height {height: 100vh;}
+.header-banner-height .main_banner_heading {padding: 30px 0 0;}
+.facilities-slider img {display: block;margin: 0 auto;}
+.facilities-slider h4 {text-align: center;margin-top: 15px;}
+.facilities-slider a {color: #fff;font-size: 20px;font-family: 'Metropolis';font-weight: 700;}
+.facilities-slider span {display: block;}
+.row.facilities-slider {margin-top: 34px;}
+/*HEADER & BANNER SECTION END*/
+
+/*WHAT WE DO SECTION CSS BEGIN*/
+.what_we_do_Sec{padding: 110px 0 50px;}
+.what_we_do_img {position: relative;}
+.what_we_do_img img {padding-top: 14px;width: 90%;padding-left: 50px;}
+.what_we_do_design {position: absolute;top: -52px;left: -47px;z-index: -1;width: 90%;}
+.what_we_do_heading {text-transform: uppercase;}
+.what_we_do_txt {width: 90%;padding: 20px 0 0;line-height: 24px;color: #333333;}
+.what_we_do_Sec .row {display: flex;align-items: center;}
+/*WHAT WE DO SECTION END*/
+
+/*DESTINATION SECTION CSS BEGIN*/
+.destination_sec {padding: 29px 0 60px;}
+.destination_heading {margin-bottom: 60px;text-transform: uppercase;}
+.site_buttn {font-size: 16px;color: #333333;font-weight: 700;border: 1px solid #333333;display: block;text-align: center;width: 37%;padding: 10px 0;border-radius: 8px;margin: 0 0 0 auto;transition: 0.6s all ease-in-out;}
+.site_buttn:hover {color: #fff !important;background-color:#5874E2;border: 1px solid #5874E2;}
+.destination_imgs span{display: block;font-size: 12px;font-weight: 400;}
+.text_right {text-align: right;}
+.text_inline {display: inline-block !important;vertical-align: baseline;}
+.border_line {/* border-bottom: 1px solid #707070; */padding: 0 0 2px;margin: 20px 2px 13px;}
+.border_line2 {padding: 0 0 2px;margin: 15px 2px 13px;display: flex;align-items: center;}
+.line_spacing {padding-top: 55px;}
+.destination_imgs  img {border-radius: 11px;}
+/*DESTINATION SECTION CSS END*/
+
+/*MISSION SECTION CSS BEGIN*/
+.mission_sec {background-image: url("../images/mono_train.png");background-repeat: no-repeat;background-size: cover;background-position: center;position: relative;padding: 120px 0;}
+.overlay1 {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #000000cf;}
+.mission_txt {color: #fff;text-align: center;width: 72%;margin: 0 auto 0 auto;line-height: 34px;font-size: 20px;}
+/*MISSION SECTION CSS END*/
+
+/*TRAIN FACILITIES SECTION CSS BEGIN*/
+.train_facilities_sec {padding: 60px 0 30px;}
+.train_facilities_heading {text-align: center;margin-bottom: 25px;text-transform: uppercase;}
+.train_facilities_sec h4 {text-align: center;margin-top: -22px;}
+.train_facilities_sec span {display: block;}
+.train_facilities_sec a {color: #333333;font-size: 20px;font-family: 'Metropolis';font-weight: 700;} 
+.train_facilities_sec a:hover {color: #5874E2;}
+/*TRAIN FACILITIES SECTION CSS END*/
+
+/*TRAVEL ARTICLE SECTION CSS BEGIN*/
+.travel_sec {padding: 70px 0 50px;}
+.travel_sec img {margin-bottom: 25px;}
+.travel_sec span {display: block;font-size: 12px;font-weight: 400;}
+.travel_sec a {font-size: 16px;color: #391C19;font-weight: 600;display: block;}
+.travel_sec a:hover {color: #5874E2;}
+.travel_txxt {margin: 5px 0 16px;}
+.travel_row {padding: 35px 0 0;}
+/*TRAVEL ARTICLE SECTION CSS END*/
+
+/*NEWSLETTER SECTION CSS BEGIN*/
+.newsletter_sec {background-image: url("../images/lines.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding: 90px 0 70px;position: relative;}
+.overlay2 {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #000000c4;}
+.news_txt {font-weight: 700;color: #fff;margin-bottom: 3px;}
+.newsletter_field {}
+.newsletter_field input {width: 67%;padding: 12px 10px;background-color: #fff;border-radius: 8px;}
+.newsletter_field .site_buttn {font-size: 16px;color: #fff;font-weight: 700;border: 1px solid #fff;display: inline-block;text-align: center;width: 27%;padding: 12px 0;border-radius: 8px;margin: 0 0 0 14px;transition: 0.6s all ease-in-out;}
+.news_txt1 {color: #fff;}
+.newsletter-email-txt {text-align: center;color: #fff;font-size: 40px;line-height: 42px;}
+.newsletter-email-txt a {display: block;color: #fff;font-size: 19px;}
+/*NEWSLETTER SECTION CSS END*/
+
+/*FOOTER SECTION CSS BEGIN*/
+.footer_sec {padding: 50px 0 0;}
+.footer_sec .footer_link {font-size: 13px;color: #391C19;font-weight: 600;display: block;}
+.footer_sec .footer_link:hover {color: #5874E2;}
+.lr_txt {padding: 20px 0 0;}
+.quick_links li {padding: 0 0 4px;}
+.quick_links a {color: #333333;}
+.quick_links a:hover {color:#5874E2;}
+.footer_headings {margin: 25px 0 38px;}
+.social_icons2 a {color: #391C19;font-size: 18px;}
+.social_icons2 {text-align: left;padding: 0 0 0;}
+.quick_links2 li {padding: 0 0 15px;}
+.quick_links2 a {color: #333333;}
+.quick_links2 a:hover {color: #5874E2;}
+.quick_links2 i {margin-right: 6px;}
+.footer_border {border-bottom: 1px solid #0003;padding-bottom: 25px;margin-bottom: 20px;}
+.copy_right_txt {text-transform: uppercase;text-align: center;}
+/*FOOTER SECTION CSS END*/
+/*HOME PAGE CSS END*/
+
+/*ABOUT US PAGE CSS BEGIN*/
+.about_banner_sec {background-image: url("../images/about_banner.png");padding: 0 0 70px;}
+.main_heading_about {text-align: center;}
+.about_banner_sec .overlay {background-color: #00000073;}
+.board_director_sec {background: #F9F4F4;padding: 80px 0 80px;}
+.borad_heading {text-align: center;text-transform: uppercase;}
+.borad_txt {width: 60%;margin: 0 auto 0 auto;text-align: center;line-height: 27px;padding: 19px 0 0;}
+.dir_row {padding: 74px 0 0;}
+.board_dir img {display: block;margin: 0 auto 0 auto;border: 6px solid #000;border-radius: 50%;padding: 10px 10px;}
+.board_dir h4 {font-weight: 600;color: #333333;text-align: center;padding: 20px 0 0;line-height: 29px;text-transform: uppercase;}
+.board_dir span {display: block;}
+.values_sec {padding: 80px 0 60px;}
+.values_txt {text-align: center;text-transform: uppercase;margin-bottom: 60px;}
+.values_txt_boxes {border: 0;padding: 60px 0 60px;border-radius: 9px;box-shadow: 0 0 17px 0px #00000038;margin: 0 40px 50px 0;min-height: 320px;}
+.values_txt_boxes img {display: block;margin: 0 auto 0 auto;}
+.values_txt_boxes h4 {text-transform: uppercase;text-align: center;padding: 20px 0 7px;}
+.values_txt_boxes p {text-align: center;margin: 0 auto 0 auto;width: 58%;}
+.project_listing li {color: #fff;text-transform: uppercase;padding: 0 0 11px;}
+.project_listing i {margin-right: 20px;font-size: 7px;vertical-align: unset;}
+.mission_sec_about {background-image: url("../images/sun.png");padding: 70px 0 70px;}
+.mission_txt_about {text-align: center;color: #fff;margin-bottom: 65px;}
+.travel_sec_about {padding: 90px 0 90px;}
+.travel_sec_about .destination_heading {text-transform: inherit;margin-bottom: 60px;text-align: center;width: 90%;margin: 0 auto 65px auto;}
+.travel_sec_about .travel_txxt {margin: 5px 0 16px;text-align: center;}
+.travel_about_txt {width: 71%;text-align: center;margin: 0 auto 0 auto;}
+.values_sec a {color: #333333;}
+.main_heading_about span {color: #391C19;}
+.royal-swiss {color: #fff;}
+.royal-swiss img {width: 14%;margin-right: 13px;vertical-align: middle;}
+/*ABOUT US PAGE CSS END*/
+
+/*TRAVEL INFORMATION PAGE CSS BEGIN*/
+.travel_banner_sec {background-image: url("../images/travel_banner.png");padding: 0 0 70px;}
+.travel_head {text-transform: uppercase;}
+.main_heading_travel span {color: #5874E2;}
+.hazara_banner {background-image: url("../images/hazara_banner.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding: 100px 0;position: relative;}
+.coaches_txt {color: #fff;text-align: center;}
+.coaches_txt span {display: block;font-size: 15px;}
+.coaches_txt1 {color: #5874E2;text-align: center;}
+.hazara_tra {color: #fff;text-transform: uppercase;text-align: center;margin-bottom: 51px;}
+.hazara_banner img {display: block;margin: 0 auto 26px auto;}
+.coaches_txta {text-align: center;color: #fff;margin: 41px 0 26px;}
+.coaches_txt1a {text-align: center;color: #5874E2;}
+.basic_co {font-weight: 500;padding: 13px 0 20px;}
+.fareed_banner {background-image: url("../images/fareed_banner.png");}
+.fareed_banner .coaches_txta {margin: 41px 0 8px;}
+.hazara_banner .site_buttn {font-size: 16px;color: #fff;font-weight: 700;border: 1px solid #fff;display: block;text-align: center;width: 28%;padding: 10px 0;border-radius: 8px;margin: 30px auto 0 auto;transition: 0.6s all ease-in-out;}
+/*TRAVEL INFORMATION PAGE CSS END*/
+
+/*GALLERY PAGE CSS BEGIN*/
+.gallery_sec {padding: 100px 0 40px;}
+.img_spac {margin-bottom: 50px;}
+.gallery_sec h4 {padding: 20px 20px 0;}
+.gallery_sec span{font-size: 15px;color: #333333;}
+.gallery_design {position: relative;}
+.gallery_overlay {transition: 0.6s all ease-in-out;opacity: 0;position: absolute;top: 1px;left: 0;width: 100%;height: 89%;background-color: #000000a1;display: flex;align-items: center;justify-content: center;border-radius: 12px;}
+.gallery_design:hover .gallery_overlay {opacity: 1;}
+.gallery_banner_sec {background-image: url("../images/gallery_banner.png");padding: 0 0 70px;}
+.gallery_design  img {border-radius: 12px;}
+/*GALLERY PAGE CSS END*/
+
+/*CONTACT US PAGE CSS BEGIN*/
+.contactus_banner_sec {background-image: url("../images/contact_banner.png");padding: 0 0 70px;}
+.form_txt input {width: 100%;padding: 10px 10px;border: 1px solid #707070;margin-bottom: 23px;}  
+.form_txt textarea {outline: none;width: 100%;padding: 10px 10px;border: 1px solid #0003;}
+.ques_txt {margin-bottom: 15px;}
+.send_form_buttn {transition: 0.6s all ease-in-out;font-size: 12px;font-weight: 700;background-color: #391C19;border: 0;display: block;width: 20%;text-align: center;color: #ffff;padding: 10px 0;border-radius: 8px;margin: 21px 0 0;}
+.send_form_buttn:hover {background-color:#5874E2;color: #fff;}
+.address_sec li {padding: 16px 0 0;color: #333333;font-weight: 500;}
+.address_sec a {font-size: 18px;color: #333333;font-weight: 500;}
+.address_sec span {display: block;color: #333333;font-size: 15px;}
+.contactus_sec iframe {padding:80px 0 0;}
+.contactus_sec {padding: 100px 0;}
+/*CONTACT US PAGE CSS END*/
+
+/*CAREER PAGE CSS BEGIN*/
+.careers_banner_sec {background-image: url("../images/career_banner.png");padding: 0 0 70px;}
+.career_sec {padding: 100px 0 130px;}
+.career_sec .table thead th {padding: 21px 40px 12px;vertical-align: bottom;border-bottom: 0;padding-left: 37px;}
+.career_sec .table td, .career_sec .table th {padding: 30px 40px 12px;vertical-align: top;border-top: 0;}
+.career_sec .table thead tr {border: 0;background-color: #F5F5F5;}
+.grey_back {background-color: #F5F5F5;}
+.grey_back td {padding: 25px 0;}
+.career_sec .slick-dots li button {width: 20px;height: 20px;padding: 5px;background: transparent;border-radius: 50%;border: 2px solid #000;}
+.career_sec .slick-active button:before {width: 20px;height: 20px;background-color: #391C19;border-radius: 50%;opacity: 1;}
+.career_sec .slick-dots {bottom: -63px;}
+.apply_now_button {font-size: 14px;color: #333333;font-weight: 700;border: 1px solid #333333;display: block;text-align: center;width: 100%;padding: 10px 0;border-radius: 8px;margin: 0 0 0 auto;transition: 0.6s all ease-in-out;}
+.apply_now_button:hover {color: #fff !important;background-color: #5874E2;border: 1px solid #5874E2;}
+.zero_spacing {padding: 30px 0px 12px !important;}
+.zero_spacing2 {padding: 30px 9px 12px !important;}
+/*CAREER PAGE CSS END*/
+
+/*JOB FORM PAGE CSS BEGIN*/
+.job-form-sec {padding: 80px 0;}
+.form-heading {text-align: center;margin-bottom: 35px;}
+.form-field label {display: block;margin: 30px 0 3px;font-weight: 500;}
+.form-field input {width: 100%;padding: 12px;border: 1px solid #0003;outline: none;}
+.form-field select {width: 100%;padding: 12px;border: 1px solid #0003;outline: none;}
+.form-field label span {color: #f50e0e;}
+.job-form-sec .site_buttn {font-size: 16px;color: #333333;font-weight: 700;border: 1px solid #333333;display: block;text-align: center;width: 18%;padding: 10px 0;border-radius: 8px;margin: 0 auto 0 auto;transition: 0.6s all ease-in-out;}
+.mr-4 span {color: #f50e0e;}
+/*JOB FORM PAGE CSS END*/
+
+/*FAREED TIMETABLE PAGE CSS BEGIN*/
+.timetable_banner_sec {background-image: url("../images/timetable1.png");padding: 0 0 70px;}
+.time-table-sec {padding: 70px 0 70px;}
+.timetable-heading {text-align: center;margin-bottom: 44px;}
+.timetable-sub-heading {text-align: center;border: 0;padding: 20px 0 20px;background: #391C19;color: #fff;}
+.timetable-main-table {}
+.timetable-main-table .table thead th {border-bottom: 0;}
+.timetable-main-table .table td, .table th {border-top: 0;}
+.timetable-main-table .table tbody {background: #F5F5F5;}
+.timetable-main-table .table tbody tr .text-center {text-align: center;}
+/*FAREED TIMETABLE PAGE CSS END*/
+
+/*MEHAR TIMETABLE PAGE CSS BEGIN*/
+.mehar_banner_sec {background-image: url("../images/timetable2.png");padding: 0 0 70px;}
+.cargo-banner-sec {background-image: url(../images/cargo-train-1.png);padding: 0 0 70px;}
+.timetable-main-table a {color: #000;}
+/*MEHAR TIMETABLE PAGE CSS END*/
+
+/*MEDIA QUERIES BEGIN*/
+@media only screen and (min-width: 320px) and (max-width: 529px) {
+.hazara_banner .site_buttn {width: 100%;}
+.what_we_do_Sec {padding: 80px 0 50px;}
+.header-banner-height {height: auto;padding: 0 0 50px;}
+.job-form-sec .site_buttn {width: 100%;margin: 30px auto 0 auto;}
+.royal-swiss {display: contents;}
+.job-form-sec {padding: 50px 0;}
+.project_listing {margin-bottom: 0;}
+.apply_now_button {font-size: 13px;padding: 4px 4px;}
+.timetable-sub-heading {display: none;}
+.timetable-sub-mob {display: block;text-align: center;border: 0;padding: 20px 0 20px;background: #391C19;color: #fff;font-size: 19px;}
+.timetable-heading {margin-bottom: 40px;font-size: 35px;}
+.form-button input {width: 100%;}
+.form-heading {font-size: 27px;margin-bottom: 10px;}
+.marker2 {top: 8px;right: 15px;}
+.mobile_show {display: block;}
+.login_links {display: none;}
+.social_icons {display: none;}
+.mobile_show2 {display: block;}
+.logo_img {width: 60%;margin-top: 22px;}
+.header_banner_sec .navbar-light .navbar-toggler {color: rgba(0,0,0,.5);border-color: rgba(0,0,0,.1);background: #fff;position: relative;left: 229px;top: -71px;}
+.destination_heading {margin-bottom: 24px;font-size: 30px;text-align: center;}
+.site_buttn {font-size: 16px;width: 100%;padding: 10px 0;margin: 0 auto 50px auto;}
+.what_we_do_heading {font-size: 30px;text-align: left;padding: 27px 0 0;}
+.top_bar {padding-bottom: 16px;margin-bottom: 10px;}
+.header_banner_sec .navbar-nav {text-align: left;background: #000;padding: 20px 20px;}
+.main_banner_heading {padding: 20px 0 10px;}
+.header_banner_sec .navbar {padding: 0 0;}
+.mobile_icons li {display: inline-block;padding: 0 12px 0 0;}
+.mobile_icons a {color: #fff;}
+.mobile_icons {padding: 15px 0 0;}
+.main_heading {color: #fff;font-size: 35px;}
+.main_txt {padding-top: 8px;margin-bottom: 45px;}
+.main_form_inner2 input {width: 100%;padding: 10px 10px;margin-bottom: 25px;}
+.main_form_inner2 {padding-top: 0;}
+.what_we_do_img img {padding-top: 14px;width: 100%;padding-left: 64px;}
+.what_we_do_design {top: -52px;left: -47px;z-index: -1;width: 100%;}
+.what_we_do_txt {text-align: left;padding: 9px 0 0;width: 100%;}
+.destination_sec {padding: 0 0 10px;}
+.text_right {text-align: right;font-size: 16px;}
+.destination_imgs span {font-size: 10px;}
+.mobile_txt {font-size: 16px;}
+.destination_imgs {margin-bottom: 40px;}
+.line_spacing {padding-top: 0;}
+.mission_sec {padding: 50px 0 30px;}
+.mission_txt {width: 100%;margin: 0 auto 0 auto;line-height: 26px;font-size: 16px;}
+.train_facilities_heading {margin-bottom: 15px;font-size: 30px;}
+.train_facilities_sec {padding: 60px 0;}
+.travel_sec span {float: right;margin-top: 5px;}
+.travel_txxt {margin: 5px 0 36px;font-size: 20px;}
+.travel_sec a {font-size: 13px;margin-bottom: 45px;}
+.travel_row {padding: 0 0 0;}
+.travel_sec {padding: 20px 0 20px;}
+.news_txt {font-size: 30px;text-align: left;}
+.newsletter_field input {width: 100%;padding: 12px 10px;border-radius: 8px;}
+.newsletter_field .site_buttn {font-size: 16px;width: 100%;padding: 12px 0;margin: 16px 0 0 0;}
+.newsletter_sec {padding: 60px 0 70px;}
+.footer_headings {margin: 25px 0 20px;}
+.social_icons2 {display: block !important;}
+.copy_right_txt {font-size: 13px;}
+.quick_links2 li {padding: 0 0 7px;}
+.mobile_show .nav-link {text-transform: uppercase;}
+.train_facilities_sec img {display: block;margin: 0 auto 0 auto;}
+.destination_imgs img {width: 100%;}
+.borad_heading {text-align: center;font-size: 30px;}
+.borad_txt {width: 100%;line-height: 27px;padding: 19px 0 0;}
+.board_director_sec {padding: 60px 0 10px;}
+.board_dir h4 {padding: 20px 0 40px;line-height: 29px;}
+.values_txt {margin-bottom: 60px;font-size: 30px;}
+.values_txt_boxes {padding: 60px 0 60px;margin: 0 0 50px 0;}
+.values_txt_boxes p {width: 92%;}
+.values_sec {padding: 60px 0 20px;}
+.mission_txt_about {margin-bottom: 34px;font-size: 30px;}
+.project_listing li {padding: 0 0 11px;display: flex;align-items: center;}
+.travel_sec_about .destination_heading {width: 100%;margin: 0 auto 49px auto;font-size: 20px;}
+.travel_sec_about {padding: 49px 0 0px !important;}
+.travel_sec img {margin-bottom: 0;}
+.travel_about_txt {width: 100%;margin: 0 auto 60px auto;}
+.prop_tra {padding: 30px 0 17px;font-size: 20px;margin-bottom: 18px;}
+.prop_txt {width: 100%;}
+.blog_listing_detail span {margin-top: 4px;}
+.blog_listing_detail a {margin-bottom: 45px;}
+.blog_listing_detail {padding: 60px 0 10px;}
+.images_spac2 {padding: 25px 0 0;}
+.blog_heading {line-height: 26px;font-size: 20px;margin-top: 15px;}
+.blog_txxt {width: 100%;padding: 10px 0 10px;}
+.blog_listing_sec .site_buttn {margin: 0 0;width: 99%;}
+.blog_listing_sec .slick-dots {bottom: -37px;}
+.blog_listing_sec {padding: 70px 0 20px;}
+.send_form_buttn {font-size: 12px;width: 100%;padding: 10px 0;margin: 21px 0 50px;}
+.ques_txt {margin-bottom: 15px;font-size: 30px;}
+.contactus_sec {padding: 60px 0 50px;}
+.gallery_sec {padding: 60px 0 0px;}
+.gallery_design {margin-bottom: 45px;}
+.img_spac {margin-bottom: 0;}
+.gallery_overlay {width: 100%;height: 82%;border-radius: 4px;}
+.travel_head {font-size: 30px;margin-top: 25px;}
+.hazara_tra {margin-bottom: 51px;font-size: 30px;}
+.hazara_banner {padding: 60px 0;}
+.coaches_txt1 {margin-bottom: 50px;}
+.train_facilities_sec h4 {margin-top: -7px;}
+.career_sec .table thead th {padding: 21px 4px 12px 0;padding-left: 19px;vertical-align: middle;}
+.career_sec .table thead th h4 {font-size: 15px;}
+.mobile-scr {display: block !important;color: #fff;margin: 14px 0 0;}
+.zero_spacing2 {padding: 30px 0 12px !important;}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+.header_banner_sec .navbar-light .navbar-toggler {left: 280px;top: -75px;}
+}
+
+@media only screen and (min-width: 425px) and (max-width: 529px) {
+.header_banner_sec .navbar-light .navbar-toggler {left: 331px;top: -75px;}
+}
+
+@media only screen and (min-width: 530px) and (max-width: 767px) {
+.header-banner-height {height: auto;}
+.form-heading {margin-bottom: 13px;font-size: 30px;}
+.job-form-sec .site_buttn {width: 40%;margin: 46px auto 0 auto;}
+.mobile-scr {display: block;color: #fff;margin: 17px 0 0;font-weight: 700;}
+.timetable-sub-heading {display: none;}
+.timetable-sub-mob {display: block;text-align: center;border: 0;padding: 20px 0 20px;background: #391C19;color: #fff;font-size: 20px;margin-top: 25px;}
+.address_sec a {font-size: 16px;}
+.apply_now_button {font-size: 13px;padding: 4px 4px;}
+.zero_spacing2 {padding: 30px 0 12px !important;}
+.royal-swiss {display: contents;}
+.mobile_show {display: block;}
+.login_links {display: none;}
+.timetable-heading {margin-bottom: 0;}
+.social_icons {display: none;}
+.mobile_show2 {display: block;}
+.logo_img {width: 100%;margin-top: 22px;}
+.header_banner_sec .navbar-light .navbar-toggler {color: rgba(0,0,0,.5);border-color: rgba(0,0,0,.1);background: #fff;position: relative;left: 458px;top: -71px;}
+.destination_heading {margin-bottom: 24px;font-size: 30px;text-align: left;}
+.site_buttn {font-size: 14px;width: 74%;padding: 10px 0;margin: 0 0 50px auto;}
+.what_we_do_heading {font-size: 30px;text-align: left;padding: 27px 0 0;}
+.top_bar {padding-bottom: 16px;margin-bottom: 10px;}
+.header_banner_sec .navbar-nav {text-align: left;background: #000;padding: 20px 20px;}
+.main_banner_heading {padding: 50px 0 10px;}
+.header_banner_sec .navbar {padding: 0 0;}
+.mobile_icons li {display: inline-block;padding: 0 12px 0 0;}
+.mobile_icons a {color: #fff;}
+.mobile_icons {padding: 15px 0 0;}
+.main_heading {color: #fff;font-size: 35px;text-align: center;}
+.main_txt {padding-top: 8px;margin-bottom: 45px;text-align: center;width: 71%;margin: 0 auto 40px auto;}
+.main_form_inner2 input {width: 100%;padding: 10px 10px;margin-bottom: 25px;}
+.main_form_inner2 {padding-top: 23px;}
+.what_we_do_img img {padding-top: 14px;width: 100%;padding-left: 64px;}
+.what_we_do_design {top: -52px;left: -40px;z-index: -1;width: 90%;}
+.what_we_do_txt {text-align: left;padding: 9px 0 0;width: 100%;}
+.destination_sec {padding: 0 0 10px;}
+.text_right {text-align: right;font-size: 16px;}
+.destination_imgs span {font-size: 10px;}
+.mobile_txt {font-size: 16px;}
+.destination_imgs {margin-bottom: 40px;}
+.line_spacing {padding-top: 0;}
+.mission_sec {padding: 50px 0;}
+.mission_txt {width: 100%;margin: 0 auto 0 auto;line-height: 26px;font-size: 16px;}
+.train_facilities_heading {margin-bottom: 15px;font-size: 30px;}
+.train_facilities_sec {padding: 60px 0;}
+.travel_sec span {float: right;margin-top: 5px;}
+.travel_txxt {margin: 5px 0 36px;font-size: 17px;}
+.travel_sec a {font-size: 13px;margin-bottom: 45px;}
+.travel_row {padding: 0 0 0;}
+.travel_sec {padding: 20px 0 20px;}
+.news_txt {font-size: 27px;text-align: left;}
+.newsletter_field input {width: 100%;padding: 12px 10px;border-radius: 8px;}
+.newsletter_field .site_buttn {font-size: 16px;width: 43%;padding: 12px 0;margin: 16px 0 0 0;}
+.newsletter_sec {padding: 60px 0 70px;}
+.footer_headings {margin: 8px 0 20px;}
+.social_icons2 {display: block !important;}
+.copy_right_txt {font-size: 13px;}
+.quick_links2 li {padding: 0 0 7px;}
+.mobile_show .nav-link {text-transform: uppercase;}
+.train_facilities_sec img {display: block;margin: 0 auto 0 auto;}
+.destination_imgs img {width: 100%;}
+.train_facilities_sec a {font-size: 17px;}
+.borad_heading {text-align: center;font-size: 30px;}
+.borad_txt {width: 100%;line-height: 27px;padding: 19px 0 0;}
+.board_director_sec {padding: 60px 0 10px;}
+.board_dir h4 {padding: 20px 0 40px;line-height: 22px;}
+.values_txt {margin-bottom: 60px;font-size: 30px;}
+.values_txt_boxes {padding: 60px 0 60px;margin: 0 0 50px 0;min-height: 344px;}
+.values_txt_boxes p {width: 92%;}
+.values_sec {padding: 60px 0 20px;}
+.mission_txt_about {margin-bottom: 34px;font-size: 30px;}
+.project_listing li {padding: 0 0 11px;display: flex;align-items: center;}
+.travel_sec_about .destination_heading {width: 100%;margin: 0 auto 49px auto;font-size: 20px;}
+.travel_sec_about {padding: 49px 0 0px !important;}
+.travel_sec img {margin-bottom: 0;}
+.travel_about_txt {width: 100%;margin: 0 auto 60px auto;}
+.mission_sec_about {padding: 50px 0 30px;}
+.prop_tra {padding: 30px 0 17px;font-size: 20px;margin-bottom: 18px;}
+.prop_txt {width: 100%;}
+.blog_listing_detail span {margin-top: 4px;}
+.blog_listing_detail a {margin-bottom: 45px;}
+.blog_listing_detail {padding: 60px 0 10px;}
+.images_spac2 {padding: 25px 0 0;}
+.images_spac {margin: 37px 0;}
+.blog_listing_detail a {font-size: 14px;}
+.blog_heading {line-height: 26px;font-size: 20px;margin-top: 15px;}
+.blog_txxt {width: 100%;padding: 10px 0 10px;}
+.blog_listing_sec .site_buttn {margin: 0 0;width: 99%;}
+.blog_listing_sec .slick-dots {bottom: -37px;}
+.blog_listing_sec {padding: 70px 0 20px;}
+.send_form_buttn {font-size: 12px;width: 100%;padding: 10px 0;margin: 21px 0 50px;}
+.ques_txt {margin-bottom: 15px;font-size: 24px;}
+.contactus_sec {padding: 60px 0 50px;}
+.contactus_sec iframe {padding: 10px 0 0;}
+.gallery_sec h4 {padding: 20px 4px 0;}
+.gallery_sec {padding: 61px 0 0px;}
+.img_spac {margin-bottom: 35px;}
+.gallery_overlay {width: 100%;height: 77%;border-radius: 3px;}
+.travel_head {font-size: 30px;margin-top: 25px;}
+.hazara_tra {margin-bottom: 51px;font-size: 30px;}
+.hazara_banner {padding: 60px 0;}
+.coaches_txt1 {margin-bottom: 50px;}
+.train_facilities_sec h4 {margin-top: -7px;}
+.what_we_do_Sec {padding: 100px 0 50px;}
+.career_sec .table thead th {padding: 21px 4px 12px 0;padding-left: 19px;vertical-align: middle;}
+.career_sec .table td, .career_sec .table th {padding: 30px 20px 12px;vertical-align: top;border-top: 0;}
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+.header-banner-height {height: auto;}
+.form-heading {margin-bottom: 13px;font-size: 30px;}
+.job-form-sec .site_buttn {width: 40%;margin: 46px auto 0 auto;}
+.timetable-sub-heading {font-size: 21px;}
+.timetable-sub-mob {display: none;}
+.zero_spacing2 {padding: 30px 8px 12px 0 !important;}
+.apply_now_button {padding: 2px 0;}
+.contact_det a {font-size: 15px;}
+.royal-swiss {display: contents;}
+.header_banner_sec .nav-item {padding: 0 4px 0 0;}
+.header_banner_sec .navbar-light .navbar-nav .nav-link {font-size: 14px;padding: 0 8px 0 0;}
+.login_links li {display: inline-block;padding: 0 14px 0 0;}
+.logo_img {width: 100%;margin-top: 18px;}
+.main_heading {font-size: 38px;}
+.main_banner_heading {padding: 90px 0 40px;}
+.what_we_do_heading {font-size: 35px;}
+.what_we_do_txt {width: 100%;padding: 20px 0 0;line-height: 24px;}
+.what_we_do_Sec {padding: 60px 0 40px;}
+.what_we_do_img img {padding-top: 14px;width: 100%;padding-left: 50px;}
+.destination_heading {margin-bottom: 60px;font-size: 35px;}
+.site_buttn {width: 50%;}
+.border_line {padding: 0 0 2px;margin: 20px 0px 13px;}
+.border_line2 {padding: 0 0 2px;margin: 15px 0px 13px;}
+.mission_sec {padding: 70px 0;}
+.train_facilities_heading {margin-bottom: 25px;font-size: 35px;}
+.footer_headings {margin: 16px 0 38px;}
+.train_facilities_sec a {font-size: 17px;}
+.board_dir h4 {padding: 20px 0 0;line-height: 22px;}
+.borad_txt {width: 83%;margin: 0 auto 0 auto;line-height: 27px;padding: 19px 0 0;}
+.project_listing li {padding: 0 0 11px;display: flex;align-items: center;}
+.values_txt_boxes p {margin: 0 auto 0 auto;width: 90%;}
+.travel_sec_about .destination_heading {margin-bottom: 60px;width: 90%;margin: 0 auto 65px auto;font-size: 25px;}
+.blog_listing_sec .site_buttn {margin: 0 0;width: 50%;}
+.send_form_buttn {font-size: 12px;width: 100%;padding: 10px 0;margin: 21px 0 50px;}
+.ques_txt {margin-bottom: 15px;font-size: 30px;}
+.contactus_sec {padding: 60px 0 50px;}
+.contactus_sec iframe {padding: 10px 0 0;}
+.gallery_overlay {width: 100%;height: 83%;border-radius: 6px;}
+.travel_head {font-size: 30px;margin-top: 25px;}
+.hazara_tra {margin-bottom: 51px;font-size: 30px;}
+.hazara_banner {padding: 60px 0;}
+.coaches_txt1 {margin-bottom: 50px;}
+.train_facilities_sec h4 {margin-top: -7px;}
+.coaches_txt span {font-size: 14px;}
+.career_sec .table thead th {padding: 21px 4px 12px 0;padding-left: 19px;vertical-align: middle;}
+.career_sec .table td, .career_sec .table th {padding: 30px 20px 12px;vertical-align: top;border-top: 0;}
+.values_txt_boxes {min-height: 345px;}
+}
+
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+.header-banner-height {height: auto;padding: 0 0 30px;}
+.form-heading {margin-bottom: 13px;font-size: 30px;}
+.job-form-sec .site_buttn {width: 40%;margin: 46px auto 0 auto;}
+.timetable-sub-mob {display: none;}
+.zero_spacing2 {padding: 30px 8px 12px 0 !important;}
+.royal-swiss {display: contents;}
+.logo_img {width: 100%;margin-top: 10px;}
+.header_banner_sec .nav-item {padding: 0 12px 0 0;}
+.ques_txt {margin-bottom: 15px;font-size: 40px;}
+.career_sec .table thead th {padding: 21px 4px 12px 0;padding-left: 19px;vertical-align: middle;}
+.career_sec .table td, .career_sec .table th {padding: 30px 20px 12px;vertical-align: top;border-top: 0;}
+.values_txt_boxes {min-height: 347px;}
+}
+
+@media only screen and (min-width:1260px) and (max-width: 1365px) {
+.royal-swiss {display: contents;}
+.timetable-sub-mob {display: none;}
+.header-banner-height {height: auto;padding: 0 0 50px;}
+}
+
+@media only screen and (min-width:1366px) and (max-width: 1439px) {
+.royal-swiss {display: contents;}
+.timetable-sub-mob {display: none;}
+.header-banner-height {height: auto;padding: 0 0 50px;}
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px){
+.royal-swiss {display: contents;}
+.timetable-sub-mob {display: none;}
+.header-banner-height {height: auto;padding: 0 0 50px;}
+}
+
+@media only screen and (min-width: 1600px) {
+.royal-swiss {display: contents;}
+.timetable-sub-mob {display: none;}
+.header-banner-height {height: auto;padding: 0 0 50px;}
+}
+
+@media only screen and (min-width: 1680px) and (max-width: 1919px){
+.royal-swiss {display: contents;}
+}
+
+@media only screen and (min-width: 2560px) {
+.royal-swiss {display: contents;}
+}
+/*MEDIA QUERIES END*/
+
+
+
+
+
